@@ -135,6 +135,20 @@ h1,h2,h3,h4 { line-height: 1.15; letter-spacing: -0.01em; }
 }
 .nav-wrap { display:flex; align-items:center; justify-content:space-between; gap:2rem; }
 .nav-logo { display:flex; align-items:center; gap:.75rem; }
+.nav-logo-img {
+  height: 44px;
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 0 8px rgba(170,0,255,0.3));
+  transition: filter var(--dur);
+}
+.nav-logo-img:hover { filter: drop-shadow(0 0 14px rgba(170,0,255,0.55)); }
+.footer-logo-img {
+  height: 56px;
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 0 6px rgba(170,0,255,0.25));
+}
 .logo-mark {
   width:42px; height:42px;
   background: linear-gradient(135deg, var(--purple), var(--purple-2));
