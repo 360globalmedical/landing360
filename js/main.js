@@ -59,6 +59,17 @@ const co = new IntersectionObserver(entries => {
 const statsRow = document.querySelector('.stats-row');
 if (statsRow) co.observe(statsRow);
 
+// Platform section metric counters
+document.querySelectorAll('.pm-count').forEach(el => {
+  const io = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) {
+      counter(el, parseInt(el.dataset.to, 10));
+      io.disconnect();
+    }
+  }, { threshold: 0.6 });
+  io.observe(el);
+});
+
 // Ticker duplicate
 const track = document.getElementById('ticker-track');
 if (track) track.innerHTML += track.innerHTML;
